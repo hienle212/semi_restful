@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User's Page</title>
+</head>
+<body>
+<div id="container">
+<h1>User {{one_user['id']}}</h1>
+<p>Full Name : {{one_user['full_name']}}</p>
+<p>Email : {{one_user['email']}}</p>
+<p>Created at : {{one_user['created_at']}}</p>
+<p><a href="/users/edit/{{one_user['id']}}">Edit</a> | <a href="/users/delete/{{one_user['id']}}">Delete</a></p>
+</div>
+
+</body>
+</html>

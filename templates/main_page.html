@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Friends</title>
+</head>
+<body>
+  <h1>Users</h1>
+<table>
+    <thead>
+      <th>id </th>
+      <th>Full Name </th>
+      <th>Email </th>
+      <th>Created_at </th>
+      <th>Actions</th>
+    </thead>
+{% for user in all_users: %}
+    <tbody>
+      <tr>
+        <td>{{user['users_id']}}</td>
+        <td>{{ user['full_name']}}</td>
+        <td>{{ user['email']}}</td> 
+        <td>{{ user['created_at']}}</td>
+        <td><a href="/users/{{user['users_id']}}">Show</a> | <a href="/users/edit/{{ user['users_id']}}">Edit</a> | <a href="/users/delete/{{ user['users_id']}}">Delete</a></td>  
+      </tr>   
+    </tbody>
+{% endfor %}
+
+  </table>
+  <h2><a href="/users/new">Add a Users</a></h2>
+
+</body>
+</html>

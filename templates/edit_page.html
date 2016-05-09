@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit user</title>
+</head>
+<body>
+<div id="container">
+<h1>Edit {{one_user['id']}}</h1>
+ <form action="/users/{{one_user['id']}}" method='POST'>
+    <label for="first_name">First Name:</label><br>
+    <input type="text" name="first_name" value="{{one_user['first_name']}}"><br>
+    <label for="last_name">Last Name:</label><br>
+    <input type="text" name="last_name" value="{{ one_user['last_name']}}"><br>
+    <label for="email">Email:</label><br>
+    <input type="text" name="email" value="{{ one_user['email']}}"><br>
+    <input type="submit" value="Update">
+</form>
+<span><a href="/users">Go Back</a></span>
+</div>
+</body>
+</html>
